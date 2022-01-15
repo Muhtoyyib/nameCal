@@ -17,13 +17,21 @@
             text-align: center;
             font-size: 30px;
         }
+        label{
+            text-transform: capitalize;
+            color: chocolate;
+        }
+        p{
+            color: chocolate;
+        }
     </style>
 </head>
 <body ng-app="myFisrtApp">
     <h1>Name calculator</h1>
     <div ng-controller="myFirstController">
-        <input type="text" ng-model="name" ng-keyup="result()"> 
-        Total numeric character is : {{totalValue}}
+        <label for="nameCal">Type your name here to see the effect</label>
+        <input type="text" id="nameCal" ng-model="name" ng-keyup="result()"> 
+        <p>Total numeric character is : {{totalValue}}</p>
        
     </div>
 </body>
